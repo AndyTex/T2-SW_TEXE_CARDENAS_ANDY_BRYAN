@@ -23,6 +23,19 @@ CREATE TABLE Especialidad
  PRIMARY KEY (IdEspecialidad),
  FOREIGN KEY (IdMedico) REFERENCES Medico(IdMedico)
  );
- 
+
+
+INSERT INTO Medico (NomMedico, ApeMedico, FechNacMedico) VALUES ('Carlos', 'Mendoza', '1979-02-14');
+INSERT INTO Medico (NomMedico, ApeMedico, FechNacMedico) VALUES ('Laura', 'Fernandez', '1983-08-22');
+INSERT INTO Medico (NomMedico, ApeMedico, FechNacMedico) VALUES ('Miguel', 'Torres', '1992-11-11');
+INSERT INTO Medico (NomMedico, ApeMedico, FechNacMedico) VALUES ('Carmen', 'Gomez', '1986-04-30');
+INSERT INTO Medico (NomMedico, ApeMedico, FechNacMedico) VALUES ('Jorge', 'Ruiz', '1991-01-17');
+
+
+INSERT INTO Especialidad (Titulo, Funcion, FechGraduacion, IdMedico) VALUES ('Oncología', 'Especialista en cáncer', '2008-09-23', 1);
+INSERT INTO Especialidad (Titulo, Funcion, FechGraduacion, IdMedico) VALUES ('Endocrinología', 'Especialista en glándulas y hormonas', '2011-12-05', 2);
+INSERT INTO Especialidad (Titulo, Funcion, FechGraduacion, IdMedico) VALUES ('Psiquiatría', 'Especialista en salud mental', '2014-03-19', 3);
+INSERT INTO Especialidad (Titulo, Funcion, FechGraduacion, IdMedico) VALUES ('Urología', 'Especialista en el sistema urinario', '2009-07-28', 4);
+INSERT INTO Especialidad (Titulo, Funcion, FechGraduacion, IdMedico) VALUES ('Oftalmología', 'Especialista en ojos', '2013-10-16', 5);
 
 
