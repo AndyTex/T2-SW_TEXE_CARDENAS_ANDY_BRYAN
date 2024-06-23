@@ -1,11 +1,13 @@
 package pe.edu.cibertec.exament2.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pe.edu.cibertec.exament2.model.Especialidad;
 import pe.edu.cibertec.exament2.repository.EspecialidadRepository;
 
 import java.util.List;
 
+@Service
 public class EspecialidadService implements IEspecialidadService {
 
 
@@ -35,4 +37,5 @@ public class EspecialidadService implements IEspecialidadService {
         }
         return null;
     }
+
 }

@@ -7,8 +7,10 @@ import java.util.Date;
 
 @Data
 @Entity
+
 public class Especialidad {
     @Id
+    @Column(name = "id_especialidad")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEspecialidad;
 
@@ -16,7 +18,8 @@ public class Especialidad {
     private String funcion;
     @Temporal(TemporalType.DATE)
     private Date fechGraduacion;
+
     @ManyToOne
-    @JoinColumn(name = "idMedico")
+    @JoinColumn(name = "idMedico", nullable = false)
     private Medico medico;
 }

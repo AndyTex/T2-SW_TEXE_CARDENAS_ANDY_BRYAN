@@ -3,6 +3,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -16,4 +17,7 @@ public class Medico {
     private String apeMedico;
     @Temporal(TemporalType.DATE)
     private Date fechNacMedico;
+
+    @OneToMany(mappedBy = "medico", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Especialidad> especialidades;
 }
