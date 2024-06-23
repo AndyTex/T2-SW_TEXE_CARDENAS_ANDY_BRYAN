@@ -7,10 +7,10 @@ import java.util.Date;
 
 @Data
 @Entity
-
+@Table(name = "especialiadad")
 public class Especialidad {
     @Id
-    @Column(name = "id_especialidad")
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEspecialidad;
 

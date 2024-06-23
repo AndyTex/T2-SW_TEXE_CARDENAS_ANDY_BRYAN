@@ -1,5 +1,6 @@
 package pe.edu.cibertec.exament2.controller;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.cibertec.exament2.model.Medico;
@@ -7,14 +8,15 @@ import pe.edu.cibertec.exament2.service.MedicoService;
 
 import java.util.List;
 
+@AllArgsConstructor
 @RestController
-@RequestMapping("/api/v1/medico")
+@RequestMapping("api/v1/medico")
 public class MedicoController {
 
     @Autowired
     private MedicoService medicoService;
 
-    @GetMapping
+    @GetMapping("")
     public List<Medico> getAllMedicos() {
         return medicoService.findAll();
     }

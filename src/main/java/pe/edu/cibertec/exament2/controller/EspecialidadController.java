@@ -1,5 +1,6 @@
 package pe.edu.cibertec.exament2.controller;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pe.edu.cibertec.exament2.model.Especialidad;
@@ -7,14 +8,15 @@ import pe.edu.cibertec.exament2.service.EspecialidadService;
 
 import java.util.List;
 
+@AllArgsConstructor
 @RestController
-@RequestMapping("/api/v1/especialidad")
+@RequestMapping("api/v1/especialidad")
 public class EspecialidadController {
 
     @Autowired
     private EspecialidadService especialidadService;
 
-    @GetMapping
+    @GetMapping("")
     public List<Especialidad> getAllEspecialidades() {
         return especialidadService.findAll();
     }

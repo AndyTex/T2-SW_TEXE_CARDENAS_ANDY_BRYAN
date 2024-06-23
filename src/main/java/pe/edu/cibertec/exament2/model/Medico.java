@@ -8,9 +8,10 @@ import java.util.List;
 
 @Entity
 @Data
-
+@Table(name = "medico")
 public class Medico {
     @Id
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idMedico;
     private String nomMedico;
