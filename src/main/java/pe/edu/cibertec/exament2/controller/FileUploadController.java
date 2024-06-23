@@ -25,7 +25,7 @@ public class FileUploadController {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid file extension: " + extension);
             }
         }
-        // Logic to handle file saving
+
         return ResponseEntity.ok("Files uploaded successfully");
     }
 
